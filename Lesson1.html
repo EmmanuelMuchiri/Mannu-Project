@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Knewave|Merienda" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Emmanuel</title>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+</head>
+<style>
+    #top{background: #804c70;
+        font-family: 'Merienda', cursive;
+        height: 80px;
+        display: flex;
+        /*Aligns the contents to the centre vertically*/
+        align-items: center;
+        /*Aligns the contents to the centre horizontally*/
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+
+    }
+    body{padding: 0;margin: 0;}
+    ul{
+        list-style: none;
+
+    }
+    li{
+        display: inline-block;
+        /*Includes a space in between the margins*/
+        margin-right: 12px;
+    }
+    /*It changes the color when one hovers the cursor   */
+    #top a:hover{color: #ff3a36;
+        border-bottom: 1px solid red;
+    }
+    #top a{
+        text-decoration: none;
+        color: #a2f0ed;
+        font-size: 1.5em;
+    }
+/*CSS Styles for the Home section*/
+    /*Styles for all sections*/
+    /*this is the class selector*/
+    .mine{
+        height: 100vh;
+        display: flex;
+        /*Aligns the contents to the centre vertically*/
+        align-items: center;
+        /*Aligns the contents to the centre horizontally*/
+        justify-content: center;
+    }
+    #home{
+        background:url("images/giphy.gif") #779da5;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left;
+        color: #0c0920;
+
+    }
+    /*When targetting many things use class otherwise use ID*/
+    .mine h2,p{
+        font-family: 'Knewave', cursive;
+        text-align: center;
+    }
+    #about{
+        background:rebeccapurple;
+        color: #0c0920;
+    }
+    #contact{
+        background: #0e807d;
+        color: #0c0920;
+    }
+    #products{
+        background: #73806d;
+        color: #0c0920;
+        justify-content: space-around;
+    }
+    #products .item{
+        width: 24%;
+        background: magenta;
+        padding-bottom: 14px;
+
+    }
+    #products img{
+        width: 100%;
+    }
+    #products h2,p{
+        margin: 0;
+    }
+    #products h2{
+        border-bottom: 1px solid white;
+        margin-bottom: 10px;
+    }
+    #products   .item:hover{
+        background: #208019;
+        color: #701c1c;
+        transition: background 3s, color 4s;
+    }
+    @keyframes example {
+        from {background-color: darkgray;}
+        to {background-color: mediumblue;}
+    }
+    #top a:hover{
+        animation-name: example;
+        animation-duration: 4s;
+    }
+    .formdiv{
+        width: 30%;
+        border: 1px solid;
+        padding: 20px;
+
+    }
+    .formdiv input,textarea,button{
+        width: 100%;
+        margin-bottom: 12px;
+        box-sizing: border-box;
+
+    }
+    .formdiv input,button{
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 10px;
+
+
+    }
+    .formdiv button{
+        background: #5b54ff;
+        color: coral;
+        border: 1px solid;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+    }
+    .boxes{
+        border: 1px greenyellow solid;
+        width: 48%;
+        padding: 15px;
+        box-sizing: border-box;
+
+        color: cadetblue;
+
+    }
+    .boxes p {
+        text-align: justify;
+    }
+    .boxes h3{
+        text-align: center;
+    }
+</style>
+<body>
+<div id="top">
+    <ul>
+        <li>
+            <a data-scroll   href="#home">Home</a>
+        </li>
+        <li>
+            <a  data-scroll  href="#about">About</a>
+        </li>
+        <li>
+            <a data-scroll  href="#contact">Contact</a>
+        </li>
+        <li>
+            <a data-scroll  href="#products">Products</a>
+        </li>
+    </ul>
+</div>
+    <!--Home section-->
+<div id="home" class="mine">
+    <div>
+        <h2>Welcome to my first web page that I am creating.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At beatae officia quas? Culpa deleniti inventore temporibus! Accusamus autem commodi cum eius facilis molestiae molestias nesciunt nobis quae quibusdam, similique, ullam!</p>
+    </div>
+</div>
+<!--Home section-->
+<div id="about" class="mine">
+    <div>
+        <h2>Welcome to my first web page that I am creating.</h2>
+        <div class="container">
+            <div class="boxes">
+                <h3>Box Two</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis deserunt doloribus earum enim nihil nobis placeat quo repudiandae sapiente voluptates? Animi quas reprehenderit tenetur veniam voluptas. Asperiores atque ea?</p>
+
+            </div>
+            <div class="boxes">
+                <h3>Box One</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus deleniti doloribus iure labore laboriosam non quod rem saepe sequi, tenetur. Accusamus corporis eaque illo molestiae nam quo repellendus rerum tenetur.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Home section-->
+<div id="contact" class="mine">
+    <div class="formdiv">
+        <form action="">
+            <input type="text" placeholder="Enter your names">
+            <input type="email" placeholder="Enter your email address">
+            <input type="tel" placeholder="Enter your Phone number">
+            <textarea rows="5" placeholder="Describe yourself"></textarea>
+            <button>Submit</button>
+        </form>
+    </div>
+</div>
+<!--Home section-->
+<div id="products" class="mine">
+    <div class="item">
+        <img src="images/One.jpg" alt="">
+        <h2>Product one</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consectetur corporis dicta dolor, ducimus eligendi eos eum eveniet expedita in ipsa iusto laudantium modi praesentium qui quia totam veniam, voluptas!</p>
+    </div>
+    <div class="item">
+        <img src="images/two.jpg" alt="">
+        <h2>Product two</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto distinctio dolore eveniet incidunt, maiores mollitia quae repellat saepe sed suscipit, vel voluptate! Debitis dolor facilis laborum natus necessitatibus placeat.</p>
+    </div>
+    <div class="item">
+        <img src="images/three.jpg" alt="">
+        <h2>Product three</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto distinctio dolore eveniet incidunt, maiores mollitia quae repellat saepe sed suscipit, vel voluptate! Debitis dolor facilis laborum natus necessitatibus placeat.</p>
+    </div>
+    <div class="item">
+        <img src="images/four.jpg" alt="">
+        <h2>Product four</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam at blanditiis est maiores neque nostrum, officiis optio tempore voluptates voluptatibus. Enim fuga laboriosam nobis pariatur provident rem repellat sapiente ullam?</p>
+    </div>
+</div>
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]');
+</script>
+</body>
+</html>
